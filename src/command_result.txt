@@ -1,0 +1,212 @@
+~/dev/c ❯ strace rg -z "main"                                                                                   17:53:41
+execve("/usr/bin/rg", ["rg", "-z", "main"], 0x7ffe8261b8d0 /* 51 vars */) = 0
+brk(NULL)                               = 0x589a38ca0000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff0c595b000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=46247, ...}) = 0
+mmap(NULL, 46247, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff0c594f000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=625344, ...}) = 0
+mmap(NULL, 627472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff0c58b5000
+mmap(0x7ff0c58b7000, 450560, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7ff0c58b7000
+mmap(0x7ff0c5925000, 163840, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x70000) = 0x7ff0c5925000
+mmap(0x7ff0c594d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x97000) = 0x7ff0c594d000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=183024, ...}) = 0
+mmap(NULL, 185256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff0c5887000
+mmap(0x7ff0c588b000, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7ff0c588b000
+mmap(0x7ff0c58af000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7ff0c58af000
+mmap(0x7ff0c58b3000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x7ff0c58b3000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(3, {st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff0c5600000
+mmap(0x7ff0c5628000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7ff0c5628000
+mmap(0x7ff0c57b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000) = 0x7ff0c57b1000
+mmap(0x7ff0c5800000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000) = 0x7ff0c5800000
+mmap(0x7ff0c5806000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ff0c5806000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff0c5885000
+arch_prctl(ARCH_SET_FS, 0x7ff0c5885c40) = 0
+set_tid_address(0x7ff0c5885f10)         = 24647
+set_robust_list(0x7ff0c5885f20, 24)     = 0
+rseq(0x7ff0c5886560, 0x20, 0, 0x53053053) = 0
+mprotect(0x7ff0c5800000, 16384, PROT_READ) = 0
+mprotect(0x7ff0c58b3000, 4096, PROT_READ) = 0
+mprotect(0x7ff0c594d000, 4096, PROT_READ) = 0
+mprotect(0x5899fa465000, 319488, PROT_READ) = 0
+mprotect(0x7ff0c5993000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7ff0c594f000, 46247)           = 0
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7ff0c5645330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x5899fa2fdc70, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7ff0c5645330}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x5899fa2fdc70, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7ff0c5645330}, NULL, 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c5958000
+mprotect(0x7ff0c5958000, 4096, PROT_NONE) = 0
+sigaltstack({ss_sp=0x7ff0c5959000, ss_flags=0, ss_size=8192}, NULL) = 0
+getrandom("\x9e\xd5\x58\x1c\xa3\xef\x37\xe1", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x589a38ca0000
+brk(0x589a38cc1000)                     = 0x589a38cc1000
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+read(3, "5899f9fb0000-5899fa02f000 r--p 0"..., 1024) = 1024
+read(3, "86_64-linux-gnu/libc.so.6\n7ff0c5"..., 1024) = 1024
+read(3, "gnu/libpcre2-8.so.0.11.2\n7ff0c59"..., 1024) = 1024
+read(3, "            [stack]\n7ffff8bc3000"..., 1024) = 180
+close(3)                                = 0
+sched_getaffinity(24647, 32, [0 1 2 3 4 5 6 7 8 9 10 11]) = 8
+getrandom("\x11\xfc\xfb\x9e\xdf\xb3\xa0\xaf\x50\x1e\x33\xb0\x74\xe3\x2f\x60", 16, GRND_INSECURE) = 16
+ioctl(1, TCGETS, {c_iflag=ICRNL, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+getcwd("/home/trard/dev/c", 512)        = 18
+ioctl(0, TCGETS, {c_iflag=ICRNL, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+uname({sysname="Linux", nodename="DESKTOP-DM4FNVR", ...}) = 0
+brk(0x589a38ce2000)                     = 0x589a38ce2000
+openat(AT_FDCWD, "/proc/self/cgroup", O_RDONLY|O_CLOEXEC) = 3
+statx(3, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+read(3, "0::/init.scope\n", 128)        = 15
+read(3, "", 113)                        = 0
+close(3)                                = 0
+statx(AT_FDCWD, "/sys/fs/cgroup/init.scope/cgroup.controllers", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/init.scope/cpu.max", O_RDONLY|O_CLOEXEC) = 3
+statx(3, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+read(3, "max 100000\n", 20)             = 11
+read(3, "", 9)                          = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/sys/fs/cgroup/cpu.max", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+sched_getaffinity(0, 128, [0 1 2 3 4 5 6 7 8 9 10 11]) = 8
+statx(AT_FDCWD, "./", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+statx(1, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFCHR|0620, stx_size=0, ...}) = 0
+statx(1, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFCHR|0620, stx_size=0, ...}) = 0
+openat(AT_FDCWD, "/home/trard/.gitconfig", O_RDONLY|O_CLOEXEC) = 3
+statx(3, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=342, ...}) = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+read(3, "[user]\n\temail = trardone@gmail.c"..., 342) = 342
+read(3, "", 32)                         = 0
+close(3)                                = 0
+brk(0x589a38d04000)                     = 0x589a38d04000
+openat(AT_FDCWD, "/home/trard/.config/git/config", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+statx(AT_FDCWD, "/home/trard/.config/git/ignore", AT_STATX_SYNC_AS_STAT, STATX_ALL, 0x7ffff8b11e40) = -1 ENOENT (No such file or directory)
+statx(0, NULL, AT_STATX_SYNC_AS_STAT, STATX_ALL, NULL) = -1 EFAULT (Bad address)
+statx(AT_FDCWD, "./", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+brk(0x589a38d26000)                     = 0x589a38d26000
+rt_sigaction(SIGRT_1, {sa_handler=0x7ff0c5699610, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7ff0c5645330}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c53ff000
+mprotect(0x7ff0c5400000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c55ff990, parent_tid=0x7ff0c55ff990, exit_signal=0, stack=0x7ff0c53ff000, stack_size=0x1ffec0, tls=0x7ff0c55ff6c0} => {parent_tid=[24648]}, 88) = 24648
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+style.md
+7:- Держи `main.c` тонким: ввод, вывод и запуск сценария; основную логику выноси в отдельные модули.
+brk(0x589a38d4f000)                     = 0x589a38d4f000
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c51fe000
+
+top/benchmark.c
+114:int main(void) {
+mprotect(0x7ff0c51ff000, 2097152, PROT_READ|PROT_WRITE
+top/style.md
+7:- Держи `main.c` тонким: ввод, вывод и запуск сценария; основную логику выноси в отдельные модули.
+
+top/report.md
+15:- `main.c` — обертка для использования графов и топологической сортировки
+) = 0
+
+rt_sigprocmask(SIG_BLOCK, ~[], top/makefile
+5:GTEST_LIBS = -lgtest -lgtest_main -pthread
+7:SRCS = main.c graph.c
+
+top/main.c
+80:int main(int argc, char** argv) {
+[], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c53fe990, parent_tid=0x7ff0c53fe990, exit_signal=0, stack=0x7ff0c51fe000, stack_size=0x1ffec0, tls=0x7ff0c53fe6c0}
+btree/test_btree.c
+158:int main(void) {
+
+btree/report.md
+15:- `main.c` — тонкая CLI-обёртка: читает команды из `input.txt` и вызывает функции дерева.
+
+btree/makefile
+4:SRCS = main.c btree.c
+ => {parent_tid=[24649]}, 88) = 24649
+
+btree/main.c
+32:int main(void) {
+
+rt_sigprocmask(SIG_SETMASK, [], main.c
+2:int main(void)
+NULL, 8) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c4ffd000
+mprotect(0x7ff0c4ffe000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c51fd990, parent_tid=0x7ff0c51fd990, exit_signal=0, stack=0x7ff0c4ffd000, stack_size=0x1ffec0, tls=0x7ff0c51fd6c0} => {parent_tid=[24650]}, 88) = 24650
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+brk(0x589a38d78000)                     = 0x589a38d78000
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c4dfc000
+mprotect(0x7ff0c4dfd000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c4ffc990, parent_tid=0x7ff0c4ffc990, exit_signal=0, stack=0x7ff0c4dfc000, stack_size=0x1ffec0, tls=0x7ff0c4ffc6c0} => {parent_tid=[24651]}, 88) = 24651
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c4bfb000
+mprotect(0x7ff0c4bfc000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c4dfb990, parent_tid=0x7ff0c4dfb990, exit_signal=0, stack=0x7ff0c4bfb000, stack_size=0x1ffec0, tls=0x7ff0c4dfb6c0} => {parent_tid=[24652]}, 88) = 24652
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+brk(0x589a38da1000)                     = 0x589a38da1000
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c49fa000
+mprotect(0x7ff0c49fb000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c4bfa990, parent_tid=0x7ff0c4bfa990, exit_signal=0, stack=0x7ff0c49fa000, stack_size=0x1ffec0, tls=0x7ff0c4bfa6c0} => {parent_tid=[24653]}, 88) = 24653
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c47f9000
+mprotect(0x7ff0c47fa000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c49f9990, parent_tid=0x7ff0c49f9990, exit_signal=0, stack=0x7ff0c47f9000, stack_size=0x1ffec0, tls=0x7ff0c49f96c0} => {parent_tid=[24654]}, 88) = 24654
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+brk(0x589a38dcb000)                     = 0x589a38dcb000
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c45f8000
+mprotect(0x7ff0c45f9000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c47f8990, parent_tid=0x7ff0c47f8990, exit_signal=0, stack=0x7ff0c45f8000, stack_size=0x1ffec0, tls=0x7ff0c47f86c0} => {parent_tid=[24655]}, 88) = 24655
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c43f7000
+mprotect(0x7ff0c43f8000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c45f7990, parent_tid=0x7ff0c45f7990, exit_signal=0, stack=0x7ff0c43f7000, stack_size=0x1ffec0, tls=0x7ff0c45f76c0} => {parent_tid=[24656]}, 88) = 24656
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+brk(0x589a38df4000)                     = 0x589a38df4000
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff0c41f6000
+mprotect(0x7ff0c41f7000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff0c43f6990, parent_tid=0x7ff0c43f6990, exit_signal=0, stack=0x7ff0c41f6000, stack_size=0x1ffec0, tls=0x7ff0c43f66c0} => {parent_tid=[24657]}, 88) = 24657
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff09fdff000
+mprotect(0x7ff09fe00000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff09ffff990, parent_tid=0x7ff09ffff990, exit_signal=0, stack=0x7ff09fdff000, stack_size=0x1ffec0, tls=0x7ff09ffff6c0} => {parent_tid=[24658]}, 88) = 24658
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+brk(0x589a38e1d000)                     = 0x589a38e1d000
+mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ff09fbfe000
+mprotect(0x7ff09fbff000, 2097152, PROT_READ|PROT_WRITE) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7ff09fdfe990, parent_tid=0x7ff09fdfe990, exit_signal=0, stack=0x7ff09fbfe000, stack_size=0x1ffec0, tls=0x7ff09fdfe6c0} => {parent_tid=[24659]}, 88) = 24659
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+futex(0x7ff0c51fd990, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 24650, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0
+munmap(0x7ff0c5958000, 12288)           = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
